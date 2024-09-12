@@ -1,0 +1,25 @@
+{
+	"title": "Test",
+	"root": true,
+	"pages": [
+		"index",
+        "bit10",
+        "quick-links",
+        "---FUNDAMENTALS---",
+        "fundamentals/getting-started",
+        "fundamentals/how-it-works",
+        "fundamentals/testnet",
+        "---Our Products---",
+        "our-products/introduction",
+        "our-products/bit10defi",
+        "our-products/bit10ordi",
+        "our-products/bit10runes",
+        "---RESOURCES---",
+        "resources/product-market-fit-strategy",
+        "resources/go-to-market-strategy",
+        "resources/monetization",
+        "resources/governance-token",
+        "resources/roadmap",
+        "resources/audits"
+	]
+}
