@@ -10,4 +10,11 @@ export default {
     './node_modules/fumadocs-ui/dist/**/*.js',
   ],
   presets: [createPreset()],
+  theme: {
+    extend: {
+      fontFamily: {
+        sansSerif: ['Source Sans Pro', 'sans-serif']
+      }
+    }
+  }
 };
