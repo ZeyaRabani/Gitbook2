@@ -12,13 +12,13 @@
         "---Our Products---",
         "our-products/introduction",
         "our-products/bit10defi",
-        "our-products/bit10ordi",
-        "our-products/bit10runes",
+        "our-products/bit10brc20",
+        "our-products/bit10top",
+        "our-products/bit10meme",
         "---RESOURCES---",
         "resources/product-market-fit-strategy",
         "resources/go-to-market-strategy",
         "resources/monetization",
-        "resources/governance-token",
         "resources/roadmap",
         "resources/audits"
 	]
