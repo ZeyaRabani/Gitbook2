@@ -1,0 +1,22 @@
+---
+title: Auto-Rebalancing 
+---
+import { ImageZoom } from 'fumadocs-ui/components/image-zoom'
+
+Rebalancing is the process of adjusting assets in an index fund to ensure it reflects the current market conditions and the intended composition of the fund. Just like the S&P 500 adjusts its list of companies based on market cap, BIT10’s index funds rebalance periodically to include the top-performing cryptocurrencies while removing underperforming ones.
+
+### How Rebalancing Works?
+
+BIT10’s backend constantly monitors the performance of the cryptocurrencies in the index fund. We’ll focus on BIT10.TOP where we track the top 10 crypto’s(excluding stablecoins) as an example. If a crypto in BIT10.TOP falls out of the top 10 due to a drop in market cap,it is removed from the fund and a new cryptocurrency that was previously in position 11 will now come back to the top 10 replacing the crypto that was at position 10.
+
+Rebalancing occurs at pre-determined intervals (e.g., monthly, quarterly, or annually). For highly volatile index funds, rebalancing will occur more frequently to ensure the portfolio remains balanced and aligned with market conditions. Rebalancing also adjusts the weights of assets in the fund to maintain proper proportions. BIT10 is doing a simple average as opposed to a market cap weighted index. 
+
+<p align="center">
+<ImageZoom src="https://raw.githubusercontent.com/ZeyaRabani/Gitbook2/main/public/assets/auto-rebalance.png" alt="auto-rebalance" className="rounded w-3/4 md:w-1/3" align="center" width={500} height={500} />
+</p>
+
+The above chart looks at 5 years growth in the crypto market. It covers the top 10 crypto’s at the 1st of January from 2020 to 2025 and the we looked at how much the price of the index fund would have gone up or down by if it was a market cap or a simple average. From all of this we concluded that it’s better to use a simple average.
+
+Rebalancing is important as the crypto market evolves rapidly. Coins that were in the top 10 last year may no longer be relevant today. Rebalancing ensures that the index fund always reflects the most relevant and valuable assets in the market. By periodically removing underperforming assets and adding top performers, rebalancing ensures that the fund is optimized for long-term growth.
+
+Users of BIT10 don’t need to worry about monitoring the market or adjusting their portfolio manually. BIT10’s automated rebalancing does this for them, providing a hands-off investment experience. Rebalancing ensures the fund is always positioned for growth by keeping only the top-performing assets in the portfolio. In a market as volatile as crypto, rebalancing helps reduce risk by diversifying across the best-performing assets and avoiding over-reliance on any single cryptocurrency.
