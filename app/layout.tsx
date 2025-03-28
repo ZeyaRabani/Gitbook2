@@ -1,4 +1,5 @@
 import './global.css'
+import 'katex/dist/katex.css'
 import { constructMetadata } from './lib/utils'
 import { RootProvider } from 'fumadocs-ui/provider'
 import type { ReactNode } from 'react'
