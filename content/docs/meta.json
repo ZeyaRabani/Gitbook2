@@ -16,6 +16,7 @@
         "---Part 3: Testnet & Mainnet---",
         "part_3/testnet",
         "part_3/mainnet",
+        "part_3/contract-addresses",
         "---Part 4: The Tech---",
         "part_4/technical-architecture",
         "part_4/auto-rebalancing",

@@ -2,8 +2,17 @@ import { source } from '@/app/source'
 import type { Metadata } from 'next'
 import { DocsPage, DocsBody, DocsDescription, DocsTitle } from 'fumadocs-ui/page'
 import { notFound } from 'next/navigation'
-import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { Step, Steps } from 'fumadocs-ui/components/steps'
 import { ImageZoom } from 'fumadocs-ui/components/image-zoom'
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/app/_components/table"
 import defaultMdxComponents from 'fumadocs-ui/mdx'
 
 export default async function Page({ params }: { params: { slug?: string[] } }) {
@@ -29,6 +38,13 @@ export default async function Page({ params }: { params: { slug?: string[] } }) 
           ...defaultMdxComponents,
           Step,
           Steps,
+          Table,
+          TableBody,
+          TableCaption,
+          TableCell,
+          TableHead,
+          TableHeader,
+          TableRow,
           img: (props) => <ImageZoom {...(props as any)} />,
         }} />
       </DocsBody>
