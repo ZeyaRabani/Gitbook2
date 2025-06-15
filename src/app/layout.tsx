@@ -1,11 +1,11 @@
 import './global.css'
 import 'katex/dist/katex.css'
-import { constructMetadata } from './lib/utils'
+import { constructMetadata } from '@/lib/utils'
 import { RootProvider } from 'fumadocs-ui/provider'
+import { DocsLayout } from 'fumadocs-ui/layouts/docs'
+import { baseOptions } from '@/app/layout.config'
+import { source } from '@/lib/source'
 import type { ReactNode } from 'react'
-import { DocsLayout } from 'fumadocs-ui/layout'
-import { baseOptions } from './layout.config'
-import { source } from './source'
 
 export const metadata = constructMetadata();
 
