@@ -1,5 +1,4 @@
 import { source } from '@/lib/source'
-import type { Metadata } from 'next'
 import { DocsPage, DocsBody, DocsDescription, DocsTitle } from 'fumadocs-ui/page'
 import { notFound, permanentRedirect } from 'next/navigation'
 import { Step, Steps } from 'fumadocs-ui/components/steps'
