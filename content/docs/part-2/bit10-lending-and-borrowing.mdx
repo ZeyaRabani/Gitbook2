@@ -1,0 +1,90 @@
+---
+title: BIT10 Lending and borrowing
+---
+
+The biggest problem of buying and keeping index funds or ETF’s is that you buy them and that is it. You can keep them until you retire and cash out all your gains. But that index fund can be used as collateral to borrow other tokens like Bitcoin, Ethereum or Solana on multiple different chains and since you have a sustainable asset like BIT10.TOP as collateral you will be fine in terms of risk compared to other cryptos. Plus you can also lend out your BIT10.TOP token and always earn instead of it not doing anything.
+
+Again this is all possible due to ICP layer-0 infrastructure that allows us to do this.
+
+## Overview
+
+BIT10 Lending & Borrowing lets you unlock the value of your BIT10.TOP holdings without selling them.
+
+Instead of leaving your BIT10 crypto index fund idle, you can:
+- <b>Borrower</b>: Use your BIT10.TOP as collateral to borrow USDC, getting liquidity while keeping your investment exposure.
+- <b>Lender</b>: Lend USDC to borrowers and earn yield, backed by fully collateralized BIT10.TOP positions.
+
+This creates a long-term-focused, secure lending market built around BIT10.TOP.
+
+## Why This Matters
+
+In traditional finance, investors often borrow against index funds like the S&P 500 to cover expenses or reinvest without selling their assets.
+
+BIT10 brings the same concept to crypto - but with the added advantages of decentralization, instant execution, and cross-chain support.
+
+## How It Works
+1. <b>Collateralization</b>
+    - BIT10.TOP represents the top 10 cryptocurrencies (excluding stablecoins), giving you diversified exposure.
+    - Each loan is overcollateralized, meaning the collateral value is always greater than the loan amount.
+2. <b>Lending & Borrowing Process</b>
+    - <b>Borrowers</b> lock their BIT10.TOP into the protocol and receive USDC.
+    - <b>Lenders</b> deposit USDC into a peer-to-pool (P2Pool) system and earn interest from active loans.
+3. <b>Interest Rates</b>
+    - Rates are market-driven and may be lower than single-asset loans (e.g., BTC, ETH) due to BIT10.TOP’s diversified nature and lower volatility.
+    - Risk and rates may vary depending on loan duration.
+4. <b>Liquidation & Risk Management</b>
+    - Loans are monitored in real-time with on-chain price feeds.
+    - If the LTV (Loan-to-Value) ratio crosses the liquidation threshold, the collateral is sold to repay the lender.
+    - Borrowers receive <b>3 margin call</b> warnings before liquidation.
+
+## Cross-Chain by Design
+
+Built on <b>ICP</b>, enabling seamless cross-chain operations without traditional bridges.
+
+Initial supported chains: ICP, Solana, Ethereum, BNB Smart Chain (and potentially more).
+
+Lenders and borrowers can interact from the chain where their assets are held - no manual transfers required.
+
+## Key Benefits
+- <b>For Borrowers</b>: Access liquidity without selling your BIT10.TOP, preserving long-term growth potential.
+- <b>For Lenders</b>: Earn yield on USDC with high-quality, diversified collateral.
+- <b>For Everyone</b>: Cross-chain, fully transparent, secure lending powered by ICP.
+
+## Lending & Borrowing Liquidation Mechanism
+
+### Purpose
+
+The liquidation system protects lenders and ensures the protocol remains solvent by automatically repaying loans when collateral value drops below safe thresholds.
+
+### Core Principles
+1. <b>Overcollateralization</b>
+    - All loans start at a <b>maximum Loan-to-Value (LTV)</b> of 90% (i.e., 110% collateralization).
+    - This buffer protects against sudden price swings in BIT10.TOP.
+2. <b>Liquidation Threshold</b>
+    - If the <b>LTV exceeds the liquidation threshold</b> (e.g., 95%), the loan becomes eligible for liquidation.
+    - This is similar to a margin call in TradFi - it’s the point where the collateral is too small relative to the debt.
+3. <b>Margin Call Alerts</b>
+    - Borrowers receive <b>real-time notifications</b> (on-chain + optional email/app) when their LTV approaches the threshold.
+    - They can add more BIT10.TOP or repay USDC to restore safe levels.
+4. <b>Automatic Liquidation</b>
+    - If no action is taken and the LTV crosses the liquidation threshold, the system automatically sells part or all of the collateral to repay the debt plus a <b>liquidation fee</b> (e.g., 3–5%). <i>[its standard by lending platforms to charge users a liquidation fee because it incentivises good behaviour]</i>
+    - This ensures lenders are paid back in full and the protocol remains solvent.
+5. <b>Price Feeds & Accuracy</b>
+    - Uses multiple <b>decentralized oracles</b> for BIT10.TOP pricing to avoid manipulation.
+    - Prices are updated in real time, with failover mechanisms for extreme market events.
+6. <b>Partial Liquidations</b> <i>(Optional but recommended)</i>
+    - Instead of liquidating the full position, only enough collateral is sold to bring the LTV back to the safe zone (e.g., 85%).
+    - This reduces borrower losses and makes the system more user-friendly.
+
+### Example Flow
+1. Borrower deposits <b>\$11,000</b> in BIT10.TOP, borrows <b>\$10,000 USDC</b> (LTV = 90%).
+2. Market dips → BIT10.TOP value drops to <b>$10,500</b> → LTV = 95% (margin call).
+3. Borrower is notified and can:
+    - Add more BIT10.TOP, or
+    - Repay some USDC.
+4. If no action taken and LTV reaches 97% → automatic liquidation triggers → $2,000 of BIT10.TOP is sold → LTV reset to safe range.
+
+### Why This Works
+- <b>Borrowers</b> know it’s the same rulebook as Aave, Compound, and TradFi margin lending - no learning curve.
+- <b>Lenders</b> are protected by strict overcollateralization and instant liquidation.
+- <b>Protocol</b> avoids bad debt even in volatile markets.

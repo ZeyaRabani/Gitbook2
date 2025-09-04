@@ -1,0 +1,162 @@
+---
+title: BIT10.TOP Architecture
+---
+import { ImageZoom } from 'fumadocs-ui/components/image-zoom'
+
+BIT10 is a market cap weighted index fund like the S&P500, the formula for calculating for both is the same so bigger crypto’s/stock(Bitcoin/Microsoft) will have much bigger weights and thus have a bigger impact on the price of the index fund.
+
+## Calculating the Bit10 Token Value
+
+With data from the ICP exchange rate canister and the Coinbase API, the oracle can perform the following steps to calculate BIT10 token's value:
+- Fetch Exchange Rates: Retrieve the latest exchange rates for relevant fiat currencies and cryptocurrencies from the ICP exchange rate canister.
+- Fetch Cryptocurrency Prices: Use the Coinbase API to get the current prices of the cryptocurrencies in the Bit10 index.
+- Compute Index Value: Calculate the Bit10 token's value by applying the weights of the constituent cryptocurrencies to their current prices and aggregating the results.
+
+## How the Collateralization Will Work
+
+Collateralization is vital for the issuance and management of the BIT10.TOP token. This ensures that for every BIT10.TOP token purchased by a user, an equivalent value of the underlying assets are bought and securely stored. This approach guarantees the token’s value and provides confidence to investors that their holdings are backed by real assets.
+
+### Overview of Collateralization
+
+Collateralization involves purchasing and holding the underlying assets that back a financial instrument. In the case of the BIT10.TOP token, these underlying assets are the top 10 cryptocurrencies (excluding stablecoins). For each BIT10.TOP token issued, a corresponding amount of these cryptocurrencies is acquired and stored in a secure and decentralized manner using the ICP canister.
+
+### Step-by-Step Collateralization Process
+1. User Purchases BIT10.TOP Token: The user initiates a purchase transaction, specifying the number of BIT10.TOP tokens they wish to buy.
+2. Calculation of Token Supply: After the user buys the token, the system updates the total supply of BIT10.TOP tokens available for purchase.
+3. Collateral-Backed Supply: The total token supply is backed by underlying assets, which are acquired before increasing the token supply.
+4. Rebalancing: The new supply is added to the existing supply after completing the rebalancing process.
+5. Purchase of Underlying Assets: The system purchases the required amounts of each underlying cryptocurrency in real-time through integrated exchanges and liquidity providers.
+6. Storage in ICP Canister: The purchased cryptocurrencies are securely stored in an ICP canister, ensuring they back the BIT10.TOP tokens.
+7. Issuance of BIT10.TOP Tokens: Once the underlying assets are successfully
+
+### Ensuring Continuous Collateralization
+
+To maintain the value and trust in the BIT10.TOP token, continuous monitoring and management of the collateralization process are done. 
+
+This involves:
+- Regular Audits: Conducting regular audits of the underlying assets held in the ICP canister to ensure they match the issued BIT10.TOP tokens.
+- Rebalancing: Periodically rebalancing the portfolio of underlying assets to align with any changes in the BIT10.TOP index composition or market conditions.
+- Automated Monitoring: Implementing automated systems to monitor the value and security of the underlying assets, ensuring they are always adequately collateralized.
+
+## How the Formula for the BIT10 Token Will Work
+
+The BIT10 token is designed to provide investors with a diversified exposure to a selection of cryptocurrencies. The value of the BIT10 token is determined by the average value of the underlying tokens that constitute the BIT10 index.
+
+Here’s how the formula works:
+1. Identify Constituent Tokens The BIT10.TOP index will consist of the top 10 cryptocurrencies (excluding stablecoins). Examples as of August 2025: BTC, ETH, BNB, SOL, XRP, ADA, DOGE, TRX, AVAX, LINK.
+2. Fetch Current Prices: The current prices of each of these tokens are fetched from reliable data sources such as the ICP exchange rate canister and the Coinbase API.
+3. Use the BIT10.TOP formula to calculate the price of it.
+
+### The In-Depth Explanation (How the Calculation Works)
+
+Here is the precise, step-by-step process we use to calculate the index price for any given day.
+
+<b>Step 1: Establish the Foundation (The Base Period)</b>
+
+First, we need a fixed starting point to measure everything against. This is called the Base Period. This can be arbitrary but for the sake of the index price being an affordable price we chose $25 Trillion and this will make much more sense later on.
+
+<b>Step 2: Calculate the Value for the Date of Interest (The Current Period)</b>
+
+Next, we take the date we want to analyze, for example, January 1, 2025.
+
+We look at the market on that day and find its unique list of the top 10 non-stablecoin cryptos. We then calculate their total, combined market capitalization.
+
+```json
+{
+    "rank": "1",
+    "name": "Bitcoin",
+    "symbol": "BTC",
+    "marketCap": "$1,869,920,980,356.28",
+    "price": "$94,419.76"
+},
+{
+    "rank": "2",
+    "name": "Ethereum",
+    "symbol": "ETH",
+    "marketCap": "$404,011,689,241.40",
+    "price": "$3,353.50"
+},
+{
+    "rank": "3",
+    "name": "XRP",
+    "symbol": "XRP",
+    "marketCap": "$133,326,115,719.76",
+    "price": "$2.3223"
+},
+{
+    "rank": "5",
+    "name": "BNB",
+    "symbol": "BNB",
+    "marketCap": "$101,742,783,746.03",
+    "price": "$706.51"
+},
+{
+    "rank": "6",
+    "name": "Solana",
+    "symbol": "SOL",
+    "marketCap": "$93,606,300,770.21",
+    "price": "$193.87"
+},
+{
+    "rank": "7",
+    "name": "Dogecoin",
+    "symbol": "DOGE",
+    "marketCap": "$47,818,533,277.33",
+    "price": "$0.3243"
+},
+{
+    "rank": "9",
+    "name": "Cardano",
+    "symbol": "ADA",
+    "marketCap": "$32,243,975,884.96",
+    "price": "$0.9176"
+},
+{
+    "rank": "10",
+    "name": "TRON",
+    "symbol": "TRX",
+    "marketCap": "$22,007,317,003.91",
+    "price": "$0.2553"
+},
+{
+    "rank": "11",
+    "name": "Avalanche",
+    "symbol": "AVAX",
+    "marketCap": "$15,451,201,151.87",
+    "price": "$37.69"
+},
+{
+    "rank": "12",
+    "name": "Chainlink",
+    "symbol": "LINK",
+    "marketCap": "$13,830,717,433.83",
+    "price": "$21.67"
+}
+```
+
+Total Market cap of the top 10 crypto’s excluding tablecoins
+
+ ```math
+\frac{2,733,959,614,585.58}{25,000,000,000,000} * 100  = 10.9
+```
+
+The price of BIT10.TOP for the 1st of January 2025 would $10.90.
+
+## BIT10.TOP Performance Chart and Proof
+
+As our flagship product, BIT10.TOP has historically outperformed Bitcoin and the S&P500 due to its market cap-weighted diversification and auto-rebalancing. Here's proof from backtested data:
+
+<ImageZoom src='https://raw.githubusercontent.com/ZeyaRabani/Gitbook2/main/public/assets/part_4/bit10-top-architecture/bit10-top-performance-chart.png' alt='BIT10.TOP Performance Chart' className='rounded border' width={1042} height={618} />
+
+- \$100 in BIT10.TOP (July 2020) → $1,416 (Aug 2025) (+1,317%).
+- \$100 in BTC → $1,227 (+1,127%).
+- \$100 in S&P500 → $202 (+102%).
+
+Another example (2017 ICO Boom/Bust Cycle):
+- \$100 in BIT10.TOP (Jan 2017–Jan 2019) → $621 (+521%).
+- \$100 in BTC → \$385 (+285%).
+- \$100 in S&P500 → $112 (+12%).
+
+This outperformance comes from capturing altcoin rotations during bull markets while mitigating risks in downturns. Run your own simulations for proof: [bit10.app/investment-calculator](https://www.bit10.app/investment-calculator).
+
+BIT10.TOP makes crypto investing easy, efficient, and exciting-join the ride!
