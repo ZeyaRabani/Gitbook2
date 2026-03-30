@@ -1,6 +1,6 @@
-import { type ClassValue, clsx } from 'clsx'
-import { twMerge } from 'tailwind-merge'
-import { Metadata } from 'next'
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+import { Metadata } from 'next';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export function constructMetadata({
   title = 'BIT10',
-  description = 'BIT10: Crypto Index Funds',
+  description = 'Empowering Your Portfolio with the Future of Finance',
   // image = '/assets/thumbnails/thumbnail.png',
   icons = '/logo/logo-circle.png',
   noIndex = false
@@ -36,7 +36,7 @@ export function constructMetadata({
       title,
       description,
       // images: [image],
-      creator: '@bit10startup'
+      creator: '@bit10app'
     },
     icons,
     metadataBase: new URL('https://www.bit10.app'),

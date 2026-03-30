@@ -1,11 +1,14 @@
-import { source } from '@/lib/source'
-import { DocsPage, DocsBody, DocsDescription, DocsTitle } from 'fumadocs-ui/page'
-import { notFound, permanentRedirect } from 'next/navigation'
-import { Step, Steps } from 'fumadocs-ui/components/steps'
-import { ImageZoom } from 'fumadocs-ui/components/image-zoom'
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/app/_components/table'
-import { Accordion, Accordions } from 'fumadocs-ui/components/accordion'
-import defaultMdxComponents from 'fumadocs-ui/mdx'
+import { source } from '@/lib/source';
+import type { Metadata } from 'next';
+import { DocsPage, DocsBody, DocsDescription, DocsTitle } from 'fumadocs-ui/page';
+import { notFound, permanentRedirect } from 'next/navigation';
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/app/_components/table';
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+import defaultMdxComponents from 'fumadocs-ui/mdx';
+import { BIT10TopAllocation } from '@/app/_components/bit10-top-allocations';
+import { BIT10TopReserves } from '../_components/bit10-top-reserve';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -44,6 +47,8 @@ export default async function Page(props: {
           TableRow,
           Accordion,
           Accordions,
+          BIT10TopAllocation,
+          BIT10TopReserves,
           img: (props) => <ImageZoom {...(props as any)} />,
         }} />
       </DocsBody>

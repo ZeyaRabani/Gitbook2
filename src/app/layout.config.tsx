@@ -1,5 +1,37 @@
-import { type LinkItemType } from 'fumadocs-ui/layouts/docs'
-import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared'
+import { type LinkItemType } from 'fumadocs-ui/layouts/docs';
+import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+
+// export const baseOptions: BaseLayoutProps = {
+//   nav: {
+//     title: (
+//       <>
+// <img src='https://raw.githubusercontent.com/ZeyaRabani/Gitbook2/main/public/logo/logo-circle.png' alt='BIT10' width={20} height={20} />
+// <span className='text-[1rem] font-semibold'>BIT10 Documentation</span>
+//       </>
+//     ),
+//   },
+//   links: [
+// {
+//   text: 'Website',
+//   url: 'https://www.bit10.app',
+//   active: 'nested-url',
+//   icon: (
+//     <img src='https://raw.githubusercontent.com/ZeyaRabani/Gitbook2/main/public/assets/globe.svg' alt='Website' width={15} height={15} />
+//   )
+// },
+//     {
+//       text: 'X/Twitter',
+//       url: 'https://twitter.com/bit10app',
+//       active: 'nested-url',
+//       icon: (
+//         <div>
+//           <img src='https://raw.githubusercontent.com/ZeyaRabani/Gitbook2/main/public/assets/twitter-light.svg' alt='Twitter' className='block dark:hidden' width={15} height={15} />
+//           <img src='https://raw.githubusercontent.com/ZeyaRabani/Gitbook2/main/public/assets/twitter-dark.svg' alt='Twitter' className='hidden dark:block ml-0.5' width={10} height={10} />
+//         </div>
+//       )
+//     },
+//   ],
+// };
 
 export const linkItems: LinkItemType[] = [
   {
@@ -15,7 +47,7 @@ export const linkItems: LinkItemType[] = [
   },
   {
     type: 'icon',
-    url: 'https://x.com/bit10startup',
+    url: 'https:/x.com/bit10app',
     text: 'Twitter/X',
     icon: (
       <svg role='img' viewBox='0 0 24 24' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
