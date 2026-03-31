@@ -1,0 +1,140 @@
+---
+title: The Mechanism
+---
+
+We call our system "The Mechanism" - it's how you go from holding stablecoins to owning the top 10 crypto market in seconds.
+
+## Step-by-Step Flow
+
+1. **CONNECT** - Connect your wallet (MetaMask, Phantom, Trust Wallet, etc.)
+2. **DEPOSIT** - Deposit stablecoins (USDC or USDT)
+3. **ACQUIRE** - BIT10 smart contracts automatically acquire the top 10 assets
+4. **RECEIVE** - You receive BIT10 TOP tokens in your wallet
+5. **HOLD** - Your portfolio auto-rebalances daily
+
+## What Happens Behind the Scenes
+
+When you deposit stablecoins:
+
+- **Price calculation** - Our oracle fetches current prices for all top 10 assets
+- **Weight calculation** - Market caps determine allocation percentages
+- **Asset acquisition** - Smart contracts acquire native assets via integrated DEXs
+- **Collateral storage** - Assets are stored in secure canisters/contracts
+- **Token minting** - BIT10 TOP tokens are minted to your wallet
+- **Verification** - All transactions recorded on-chain for transparency
+
+All of this happens automatically. You just deposit and receive.
+
+## The Simple Flow
+
+```text
+┌─────────────┐     ┌──────────────┐     ┌─────────────┐
+│  You Deposit│ ──▶ │  BIT10 Buys  │ ──▶ │ You Receive  │
+│  USDC/USDT  │     │ Top 10 Assets│     │  BIT10 TOP   │
+└─────────────┘     └──────────────┘     └─────────────┘
+```
+
+## The Burn Mechanism (Selling)
+
+When you sell or redeem BIT10 TOP tokens, the reverse process occurs:
+
+```text
+┌─────────────┐     ┌──────────────┐     ┌─────────────┐
+│  You Submit  │ ──▶ │  BIT10 Sells │ ──▶ │ You Receive  │
+│  BIT10 TOP   │     │ Underlying   │     │  Stablecoins │
+└─────────────┘     └──────────────┘     └─────────────┘
+```
+
+1. You submit your BIT10 TOP tokens for redemption
+2. Smart contracts sell the proportional underlying assets
+3. BIT10 TOP tokens are burned (removed from circulation)
+4. You receive stablecoins back in your wallet
+
+No lockups. No waiting periods. Your tokens, your choice.
+
+## Technical Overview
+
+BIT10 operates on ICP's technical architecture, using canisters for tamper-proof operations, oracles for pricing, and chain-key technology for cross-chain interactions.
+
+| Component | Purpose |
+| --- | --- |
+| ICP Canisters | Tamper-proof smart contracts |
+| Price Oracles | Real-time market data |
+| Chain-Key Technology | Cross-chain interactions |
+| DEX Integration | Asset acquisition |
+| Secure Storage | Native asset custody |
+
+## Gas Optimization: One vs Ten
+
+**Traditional approach** to owning top 10:
+
+| Action | Transactions | Gas Fees |
+| --- | --- | --- |
+| Buy BTC | 1 | $X |
+| Buy ETH | 1 | $X |
+| Buy XRP | 1 | $X |
+| Buy BNB | 1 | $X |
+| Buy SOL | 1 | $X |
+| Buy TRX | 1 | $X |
+| Buy DOGE | 1 | $X |
+| Buy ADA | 1 | $X |
+| Buy HYPE | 1 | $X |
+| Buy LINK | 1 | $X |
+| **Total** | **10** | **10X** |
+
+**BIT10 approach:**
+
+| Action | Transactions | Gas Fees |
+| --- | --- | --- |
+| Buy BIT10 TOP | 1 | $X |
+| **Total** | **1** | **X** |
+
+You save 90% on transactions and gas.
+
+## Selling / Redeeming
+
+Want to exit? Just as simple:
+
+1. Go to bit10.app
+2. Select "Sell" or "Redeem"
+3. Choose amount of BIT10 TOP
+4. Receive stablecoins (or underlying assets)
+
+No lockups. No waiting periods. Your tokens, your choice.
+
+## How Rebalancing Works
+
+BIT10's backend constantly monitors the performance of the cryptocurrencies in the index fund. We track the top 10 cryptos (excluding stablecoins) for BIT10 TOP.
+
+If a crypto falls out of the top 10 due to a drop in market cap, it is removed from the fund and a new cryptocurrency that was previously in position 11 takes its place. Rebalancing occurs daily at 11AM GMT.
+
+BIT10 uses market cap weighting as opposed to a simple average.
+
+### Automatic Rebalancing
+
+Like the S&P 500, BIT10 TOP adapts:
+
+- Assets that grow get added weight
+- Assets that shrink lose weight
+
+### Daily Rebalancing Schedule
+
+**Snapshot:** Current market caps recorded, new target weights calculated (e.g., BTC 69.91%, ETH 14.35%, etc.)
+
+**Adjustment:** Compare current holdings to targets, calculate required trades, execute buys/sells to align weights
+
+**Hold:** Portfolio matches market-cap weights. Repeat every day at 11AM GMT.
+
+### Real Example
+
+NVIDIA wasn't in the S&P 500 in 2017. Today it's the largest company. Kodak was a giant in the 1990s. It was removed in 2004. The index adapts. BIT10 TOP adapts too.
+
+### Top 10 Changes
+
+If a crypto falls out of the top 10 due to a drop in market cap:
+
+- It's removed from the fund
+- A new cryptocurrency (previously #11) takes its place
+- Weights are adjusted automatically
+
+You don't have to do anything. The index adapts.
