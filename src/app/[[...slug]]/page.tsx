@@ -5,8 +5,9 @@ import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { getMDXComponents } from '@/components/mdx';
 import { Step, Steps } from 'fumadocs-ui/components/steps';
 import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
-import { BIT10TopAllocation } from '@/components/bit10-top-allocations';
+import { BIT10TOPAllocation } from '@/components/bit10-top-allocations';
 import { BIT10TopReserves } from '@/components/bit10-top-reserve';
+import { BIT10SOLAllocation } from '@/components/bit10-sol-allocations';
 
 export default async function Page(props: { params: Promise<{ slug?: string[] }>; }) {
     const params = await props.params;
@@ -37,8 +38,9 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
                         Steps,
                         // eslint-disable-next-line @typescript-eslint/no-explicit-any
                         img: (props) => <ImageZoom {...(props as any)} />,
-                        BIT10TopAllocation,
-                        BIT10TopReserves
+                        BIT10TOPAllocation,
+                        BIT10TopReserves,
+                        BIT10SOLAllocation
                     })}
                 />
             </DocsBody>

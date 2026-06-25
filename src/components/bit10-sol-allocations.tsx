@@ -1,9 +1,9 @@
 async function getBIT10Data() {
     const res = await fetch(
-        'https://bit10.app/bit10-latest-rebalance-top',
+        'https://bit10.app/bit10-latest-rebalance-sol',
         { next: { revalidate: 3600 } }
     );
-    if (!res.ok) throw new Error('Failed to fetch BIT10 data');
+    if (!res.ok) throw new Error('Failed to fetch BIT10.SOL data');
     return res.json();
 }
 
@@ -21,7 +21,7 @@ interface TokenWithPercentage extends Token {
     percentage: string;
 }
 
-export async function BIT10TOPAllocation() {
+export async function BIT10SOLAllocation() {
     const data = await getBIT10Data();
     const tokens: Token[] = data.newTokens;
 
